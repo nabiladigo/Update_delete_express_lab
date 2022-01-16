@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const products = require('../models/products-model.js');
+const product = require('../models/product-model.js');
 
 router.get('/', (req, res)=>{
-    const allProducts = products.find();
+    const allProducts = product.find();
     res.render('index.ejs', {products: allProducts});
 });
 router.post('/', (req, res)=>{
-    products.create(req.body, (error, createProduct)=>{
+    product.create(req.body, (error, createProduct)=>{
         if(error) return console.log(error);
         console.log(createProduct);
         res.redirect('/products');
@@ -18,7 +18,7 @@ router.get('/new', (req, res)=>{
 });
 
 router.get('/:productId', (req, res)=>{
-    products.findById(req.params.productId, (error, foundItem)=>{
+    product.findById(req.params.productId, (error, foundItem)=>{
         if(error){
             return console.log(error);
             return res.status(404).render('404.ejs', {error: error});
@@ -28,7 +28,7 @@ router.get('/:productId', (req, res)=>{
 });
 
 router.delete('/:productId', (req, res)=>{
-    products.findByIdAndDelete(req.params.productId, (error, deletedProduct)=>{
+    product.findByIdAndDelete(req.params.productId, (error, deletedProduct)=>{
         if(error){
             console.log(error);
             res.status(404).render('404.ejs', {error: error});
@@ -38,7 +38,7 @@ router.delete('/:productId', (req, res)=>{
     });
 });
  router.get('/:productId/edit', (req, res)=>{
-     products.findById(req.params.productId, (error, updatedProduct)=>{
+     product.findById(req.params.productId, (error, updatedProduct)=>{
          if(error){
              console.log(error);
              res.status(404).render('404.ejs', {error: error});
@@ -48,7 +48,7 @@ router.delete('/:productId', (req, res)=>{
  });
 
  router.put('/:productId', (req, res)=>{
-     products.findByIdAndUpdate(req.params.productId, req.body, (error, updatedProduct)=>{
+     product.findByIdAndUpdate(req.params.productId, req.body, (error, updatedProduct)=>{
         if(error){
             console.log(error);
             res.status(404).render('404.ejs', {error: error});

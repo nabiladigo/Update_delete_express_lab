@@ -1,7 +1,7 @@
 const express = require('express');
 const  app = express();
 const productsController = require('./controllers/products-controller.js');
-const PORT = 2000;
+const PORT = 3000;
 
 app.set('view engine', 'ejs');
 

@@ -1,5 +1,3 @@
-const { Template } = require("ejs");
-
 class Collection {
     #Model
     #currentId

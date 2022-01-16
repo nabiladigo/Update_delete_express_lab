@@ -40,29 +40,56 @@
         </section>
 
         <form action="/products" method="POST">
-            <div class="field">
-                <label class="label">Product Name</label>
+            <div class="field ">
+                <label class="label is-medium">Product Name</label>
 
                 <div class="control">
-                    <input class="input" type="text" placeholder="Super Cool Product" name="name"/>
+                    <input class="input" type="text" placeholder="your product name" name="name"/>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label  is-medium">Product color</label>
+
+                <div class="control">
+                    <input class="input" type="text" placeholder="product color" name="color"/>
                 </div>
             </div>
         
             <div class="field">
-                <label class="label">Product Price</label>
+                <label class="label is-medium">Product Price</label>
 
                 <div class="control">
-                    <input class="input" type="number" placeholder="32" name="price" />
+                    <p class="control">
+                        <span class="select">
+                          <select>
+                            <option>$</option>
+                            <option>£</option>
+                            <option>€</option>
+                          </select>
+                        </span>
+                      </p>
+                      <p class="control">
+                        <input class="input" type="number" placeholder="32" name="price" />
+                      </p>
                 </div>
             </div>
         
             <div class="field">
-                <label class="label">Product Image</label>
+                <label class="label is-medium">Product Image</label>
 
                 <div class="control">
                     <input class="input" type="text" placeholder="http://" name="image" />
                 </div>
             </div>
+            <div class="field">
+                <label class="label is-medium">Product Description</label>
+
+                <div class="control">
+                    <input class="input" type="text" placeholder="product Description" name="Description"/>
+                </div>
+            </div>
+            
         
             <div class="field is-grouped">
                 <div class="control">
