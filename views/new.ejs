@@ -13,12 +13,12 @@
         <script src="/scripts/bulma.js" defer></script>
         <script src="/scripts/main.js" defer></script>
 
-        <title>SellItUp</title>
+        <title>New Product</title>
 
     </head>
 
     <body class="has-navbar-fixed-top">
-            <!-- https://bulma.io/documentation/components/navbar/#fixed-navbar -->
+            
         <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
 
             <div class="navbar-brand">
@@ -41,7 +41,7 @@
 
         <form action="/products" method="POST">
             <div class="field ">
-                <label class="label is-medium">Product Name</label>
+                <label class="label ">Product Name</label>
 
                 <div class="control">
                     <input class="input" type="text" placeholder="your product name" name="name"/>
@@ -49,7 +49,7 @@
             </div>
 
             <div class="field">
-                <label class="label  is-medium">Product color</label>
+                <label class="label ">Product color</label>
 
                 <div class="control">
                     <input class="input" type="text" placeholder="product color" name="color"/>
@@ -57,7 +57,7 @@
             </div>
         
             <div class="field">
-                <label class="label is-medium">Product Price</label>
+                <label class="label">Product Price</label>
 
                 <div class="control">
                     <p class="control">
@@ -70,7 +70,7 @@
                         </span>
                       </p>
                       <p class="control">
-                        <input class="input" type="number" placeholder="32" name="price" />
+                        <input class="input" type="number" placeholder="$00" name="price" />
                       </p>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="field">
-                <label class="label is-medium">Product Description</label>
+                <label class="label ">Product Description</label>
 
                 <div class="control">
                     <input class="input" type="text" placeholder="product Description" name="Description"/>
