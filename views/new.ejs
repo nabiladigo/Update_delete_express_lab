@@ -13,7 +13,7 @@
         <script src="/scripts/bulma.js" defer></script>
         <script src="/scripts/main.js" defer></script>
 
-        <title>New Product</title>
+        <title>New Animal</title>
 
     </head>
 
@@ -22,7 +22,7 @@
         <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
 
             <div class="navbar-brand">
-                <a class="navbar-item" href="/products"> All Products </a>
+                <a class="navbar-item" href="/animals"> All Animals </a>
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
@@ -35,65 +35,45 @@
 
         <section class="hero is-medium has-background-light">
             <div class="hero-body">
-                <h1 class="title">New Product page</h1>
+                <h1 class="title"> Adding new animal</h1>
             </div>
         </section>
 
-        <form action="/products" method="POST">
+        <form action="/animals" method="POST">
             <div class="field ">
-                <label class="label ">Product Name</label>
+                <label class="label ">Animal Name</label>
 
                 <div class="control">
-                    <input class="input" type="text" placeholder="your product name" name="name"/>
+                    <input class="input" type="text" placeholder="animal name" name="name"/>
                 </div>
             </div>
 
             <div class="field">
-                <label class="label ">Product color</label>
+                <label class="label ">animal category</label>
 
                 <div class="control">
-                    <input class="input" type="text" placeholder="product color" name="color"/>
+                    <input class="input" type="text" placeholder="animal category" name="category"/>
                 </div>
             </div>
-        
             <div class="field">
-                <label class="label">Product Price</label>
-
-                <div class="control">
-                    <p class="control">
-                        <span class="select">
-                          <select>
-                            <option>$</option>
-                            <option>£</option>
-                            <option>€</option>
-                          </select>
-                        </span>
-                      </p>
-                      <p class="control">
-                        <input class="input" type="number" placeholder="$00" name="price" />
-                      </p>
-                </div>
-            </div>
-        
-            <div class="field">
-                <label class="label is-medium">Product Image</label>
+                <label class="label is-medium">Animal Image</label>
 
                 <div class="control">
                     <input class="input" type="text" placeholder="http://" name="image" />
                 </div>
             </div>
             <div class="field">
-                <label class="label ">Product Description</label>
+                <label class="label ">Animal Description</label>
 
                 <div class="control">
-                    <input class="input" type="text" placeholder="product Description" name="Description"/>
+                    <input class="input" type="text" placeholder="Animal Description" name="Description"/>
                 </div>
             </div>
             
         
             <div class="field is-grouped">
                 <div class="control">
-                    <button class="button is-info">Create Product</button>
+                    <button class="button is-info">Create Animal</button>
                 </div>
             </div>
         </form>

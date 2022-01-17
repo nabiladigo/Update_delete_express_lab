@@ -19,7 +19,7 @@
         <script src="/scripts/bulma.js" defer></script>
         <script src="/scripts/main.js" defer></script>
 
-        <title>Show Page</title>
+        <title>Anamils Page</title>
     </head>
 
     <body class="has-navbar-fixed-top">
@@ -27,7 +27,7 @@
           
         <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation" >
             <div class="navbar-brand">
-                <a class="navbar-item" href="/products"> All Products </a>
+                <a class="navbar-item" href="/products"> mammal </a>
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" >
                     <span aria-hidden="true"></span>
@@ -37,35 +37,32 @@
             </div>
         </nav>
 
-        <section class="hero is-medium has-background-light">
-            <div class="hero-body">
-                <h1 class="title">Product Show Page</h1>
-            </div>
-        </section>
+        
+            
+          
 
         <div class="container is-max-widescreen p-5">
             <article class="media">
                 <figure class="media-left">
-                    <p class="image is-328x328">
-                        <img src="<%= products.image %>" alt="product img" />
+                    <p class="image ">
+                        <img src="<%= animal.image %>" alt="animal img" />
                     </p>
                 </figure>
                 <div class="media-content">
                     <div class="content">
-                        <h3>name: <%= product.name %></h3>
-                        <small>price: $<%= product.price %>$</small>
-                        <small>Color:<%= product.color %></small>
-                        <p> Description:<%=product.Description%></p>
+                        <h3>name: <%= animal.name %></h3>
+                        <p>Category: <%=animal.category%></p>
+                        <p> Description:<%=animal.description%></p>
  
                             <div class="field is-grouped mt-5">	
                                 	
                                 <div class="control">
-                                    <a class="button is-info" href="/products/<%= product.id %>/edit">Edit Product</a>
+                                    <a class="button is-info" href="/animals/<%= animal.id %>/edit">Edit Animal</a>
                                 </div>
             
                                 <div class="control">
-                                    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-                                        <input class="button is-danger" type="submit" value="	Delete Product"/>                    
+                                    <form action="/animals/<%= animal.id %>?_method=DELETE" method="POST">
+                                        <input class="button is-danger" type="submit" value="	Delete Animal"/>                    
                                     </form>
                                 </div>
 

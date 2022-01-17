@@ -13,14 +13,14 @@
         <script src="/scripts/bulma.js" defer></script>
         <script src="/scripts/main.js" defer></script>
 
-        <title>SellItUp</title>
+        <title>Mammals </title>
     </head>
 
     <body class="has-navbar-fixed-top">
 
         <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation" >
             <div class="navbar-brand">
-                <a class="navbar-item" href="/products"> All Products </a>
+                <a class="navbar-item" href="/products"> Animals </a>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -29,33 +29,32 @@
             </div>
     
         </nav>
-
-        <section class="hero is-medium has-background-light">
-            <div class="hero-body">
-                <p class="title">All Products</p>
-            </div>
-        </section>
-
+        <h1 class="title"><strong>Mammals</strong></h1>
         <main class="container is-max-widescreen">
+        
+            
+            <p class="intro">
+                Mammals—a group that include humans—are warm-blooded animals with hair and vertebrates, or backbones. Unlike other classes of animals, female mammals produce milk to nourish their young. 
+                Scientists have identified more than 5,400 mammal species on Earth, roughly one-fifth of which are known to be threatened or extinct. One of the most threatened order of mammals is the primate, which includes monkeys and apes. The United States has more than 400 mammal species.
+            </p>
             <div class="columns is-multiline p-5">
-                <% for(let idx = 0; idx < products.length; idx++){ %> 
-                    <% const product = products[idx] %>
+                <% for(let idx = 0; idx < animals.length; idx++){ %> 
+                    <% const animal = animals[idx] %>
 
                         <div class="column is-one-third">
                             <article class="card">
                                 <section class="card-image">
-                                    <figure class="image is-3by3">
-                                        <img src="<%= product.image %>" alt="Placeholder image" />
-                                    </figure>
+                                  
+                                        <img  class="is-rounded" src="<%= animal.image %>" alt="Placeholder image" />
+                                    
                                     </div>
                                 </section>
                                 <div class="card-content">
                                     <div class="content">
                                         <h3>
-                                            <a href="/products/<%= product.id %>"><%= product.name %> </a>
+                                            <a href="/animals/<%= animal.id %>"><%= animal.name %> </a>
                                         </h3>
-                                        <p class="color"> <%= product.color%></p>
-                                        <p class="price">$<%= product.price %></p>
+                                       
                                     </div>
                                 </div>
                             </article>
