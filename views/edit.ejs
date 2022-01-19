@@ -20,7 +20,7 @@
     <script src="/scripts/bulma.js" defer></script>
     <script src="/scripts/main.js" defer></script>
 
-    <title>SellItUp</title>
+    <title>Edit form</title>
   </head>
   <body class="has-navbar-fixed-top">
     <!-- https://bulma.io/documentation/components/navbar/#fixed-navbar -->
@@ -29,69 +29,78 @@
       role="navigation"
       aria-label="main navigation"
     >
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/products"> All Products </a>
-      </div>
-      <!-- this will add a link to the new route -->
       <div class="navbar-end">
-        <a class="navbar-item" href="/products/new"> New Product </a>
+        <a class="navbar-item" href="/animals/new"> New Animal </a>
       </div>
     </nav>
 
-    <section class="hero is-medium has-background-light">
+    
       <div class="hero-body">
-        <h1 class="title">Edit Product page</h1>
+        <h1 class="title">Edit Animal page</h1>
       </div>
-    </section>
+   
 
     <section class="container is-max-widescreen p-5">
-      <!--  NOTE: action will be the route, method will be the HTTP verb-->
-      <form action="/products/<%=product.id %>?_method=PUT" method="POST">
+      
+      <form action="/animals/<%=animal.id %>?_method=PUT" method="POST">
         <div class="field">
-          <label class="label">Product Name</label>
+          <label class="label">Animal Name</label>
           <div class="control">
             <input
               class="input"
               type="text"
-              placeholder="product name"
+              placeholder="animal name"
               name="name"
-              value="<%= product.name %> "
+              value="<%= animal.name %> "
             />
           </div>
         </div>
-
         <div class="field">
-          <label class="label">Product Price</label>
+          <label class="label">Animal Category</label>
           <div class="control">
             <input
               class="input"
               type="text"
-              placeholder="product price"
-              name="price"
-              value="<%= product.price %>"
+              placeholder="animal category"
+              name="text"
+              value="<%= animal.category %> "
             />
           </div>
         </div>
-
         <div class="field">
-          <label class="label">Product Image</label>
+          <label class="label">Animal Image</label>
           <div class="control">
             <input
               class="input"
               type="text"
-              placeholder="product image"
+              placeholder="animal image"
               name="image"
-              value="<%= product.image %> "
+              value="<%= animal.image %> "
             />
           </div>
         </div>
+        
+        </div>
+        <div class="field">
+          <label class="label">Animal Description</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              placeholder="animal description"
+              name="text"
+              value="<%= animal.description %> "
+            />
+          </div>
+        </div>
+
 
         <div class="field is-grouped">
           <div class="control">
-            <a class="button is-info" href="/products/<%= product.id %> "
+            <a class="button is-info" href="/animals/<%= animal.id %> "
               >Cancel</a
             >
-            <button class="button is-success">Edit Product</button>
+            <button class="button is-success">Edit Animal</button>
           </div>
         </div>
       </form>
